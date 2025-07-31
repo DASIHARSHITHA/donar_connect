@@ -10,7 +10,10 @@ That’s where Donor Connect comes in.
 Make giving easy and impactful.
 
 🛠️ What We Built
-We created a frontend-only web platform using HTML, CSS, and JavaScript to:
+We created a frontend-only web platform using 
+-> HTML
+-> CSS
+-> JavaScript
 
 ✅ Connect donors with the right causes
 ✅ Highlight areas where help is needed most
