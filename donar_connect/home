@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> KINDCUISINE- Home</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: url("https://img.freepik.com/free-vector/people-carrying-donation-charity-related-icons_53876-59881.jpg?t=st=1742669858~exp=1742673458~hmac=b9740fcc84a80e56477f59cef8cab5c4916103839fab234376acb7f37e153867&w=1060")
+          no-repeat center center/cover;
+        color: white;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(211, 47, 47, 0.9);
+        padding: 15px 30px;
+        color: white;
+      }
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        padding: 0;
+      }
+      nav ul li {
+        margin: 0 15px;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+      }
+      header {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.6);
+      }
+      .content {
+        padding: 30px;
+        border-radius: 10px;
+      }
+      h1 {
+        font-size: 40px;
+        margin: 0 0 10px;
+      }
+      p {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      button {
+        background: #ff5722;
+        color: white;
+        border: none;
+        padding: 15px 25px;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      button:hover {
+        background: #e64a19;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">KIND CUISINE</div>
+      <ul>
+        <li><a href="donate1.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="index1.html">Donate</a></li>
+        <li><a href="ngo.html">NGO Dashboard</a></li>
+      </ul>
+    </nav>
+    <header>
+      <div class="content">
+        <h1>EVERY PLATE COUNTS.<br />EVERY LIFE MATTERS.</h1>
+        <p>Join us in making an impact today!</p>
+        <a href="index1.html">
+          <button class="donate-btn">Donate Food</button>
+      </a>
+      
+        
+      </div>
+    </header>
+
+    
+  </body>
+</html>

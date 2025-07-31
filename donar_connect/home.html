@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DONOR CONNECT - Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo"> 🤲 DONOR CONNECT  🤲</div>
+      <ul>
+        <li><a href="home.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="index2.html">Donate</a></li>
+        <li><a href="ngo.html">NGO Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Your Contribution <br> Their Happiness.<br></h1>
+
+    <p>Join us in making an impact today!</p>
+    <button onclick="location.href='register.html'">Register Now</button>
+  </section>
+
+  <footer>
+    <p>Donor Connect &copy; 2025. Making a difference, one meal at a time.</p>
+  </footer>
+</body>
+</html>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  body {
+    background-color: #000;
+    color: white;
+  }
+
+  header {
+    background-color: #b71c1c;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+
+  nav ul li {
+    margin-left: 30px;
+  }
+
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+
+  nav ul li a.active, nav ul li a:hover {
+    color: #ffcc00;
+  }
+
+  .hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('background.jpg') center/cover;
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #ffcc00, #ff6b6b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: #ffcc00;
+  }
+
+  button {
+    background-color: #e63946;
+    color: white;
+    font-size: 1.5rem;
+    padding: 20px 50px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  button:hover {
+    background-color: #d62839;
+    transform: scale(1.05);
+  }
+
+  footer {
+    background-color: #121212;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #ccc;
+  }
+</style>

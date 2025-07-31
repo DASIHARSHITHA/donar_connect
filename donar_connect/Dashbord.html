@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGO Dashboard - KIND CUISINE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://img.freepik.com/free-vector/people-carrying-donation-charity-related-icons_53876-59881.jpg?t=st=1742669858~exp=1742673458~hmac=b9740fcc84a80e56477f59cef8cab5c4916103839fab234376acb7f37e153867&w=1060') no-repeat center center fixed;
+            background-size: cover;
+            color: rgb(247, 244, 244);
+            text-align: center;
+        }
+        .navbar {
+            background-color: #c00000;
+            padding: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar .logo {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+        .navbar .nav-links {
+            margin-right: 20px;
+        }
+        .navbar .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .dashboard {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            width: 200px;
+        }
+        .card h3 {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">KIND CUISINE</div>
+        <div class="nav-links">
+            <a href="donate.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Donate</a>
+            <a href="Dashbord.html">NGO Dashboard</a>
+        </div>
+    </div>
+    <div class="container">
+        <h1>NGO DASHBOARD</h1>
+        <div class="dashboard">
+            <div class="card">
+                <h3>NGO 1</h3>
+                <p>Location: Mumbai</p>
+                <p>Status: Active</p>
+            </div>
+            <div class="card">
+                <h3>NGO 2</h3>
+                <p>Location: Delhi</p>
+                <p>Status: Active</p>
+            </div>
+            <div class="card">
+                <h3>NGO 3</h3>
+                <p>Location: Bangalore</p>
+                <p>Status: Pending</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const cards = document.querySelectorAll(".card");
+            cards.forEach(card => {
+                card.addEventListener("click", function() {
+                    alert("You clicked on " + this.querySelector("h3").innerText);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

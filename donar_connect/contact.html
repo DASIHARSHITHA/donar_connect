@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIND CUISINE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .navbar {
+            background: #d32f2f;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+        .container {
+            background: #333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        input {
+            background: #444;
+            color: white;
+        }
+        button {
+            background: #e63946;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #ff4757;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Donate Food</h2>
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="email" id="email" placeholder="Your Email">
+        <input type="text" id="location" placeholder="Your Location">
+        <input type="file" id="foodImage">
+        <button onclick="submitForm()">Submit</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function submitForm() {
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let location = document.getElementById('location').value;
+            
+            if (name === '' || email === '' || location === '') {
+                document.getElementById('message').innerText = 'Please fill all fields';
+                return;
+            }
+            document.getElementById('message').innerText = 'Thank you for your donation!';
+        }
+    </script>
+</body>
+</html>

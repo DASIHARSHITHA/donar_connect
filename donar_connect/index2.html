@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate Food</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background-color: #121212;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .form-card {
+      background-color: #1e1e1e;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+      width: 100%;
+      max-width: 500px;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h1 {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="file"] {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 12px;
+      background-color: #333;
+      color: #fff;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="file"]:focus {
+      background-color: #444;
+      outline: none;
+      transform: scale(1.02);
+    }
+    button {
+      width: 100%;
+      background-color: #e63946;
+      color: white;
+      padding: 14px;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #d62839;
+    }
+    p#message {
+      color: white;
+      margin-top: 10px;
+      text-align: center;
+    }
+    .checkbox-group {
+      color: white;
+      margin-bottom: 20px;
+    }
+    .checkbox-group label {
+      margin-right: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-card">
+    <h1>Donate</h1>
+    <input id="name" type="text" placeholder="Your Name" />
+    <input id="email" type="email" placeholder="Your Email" />
+    <input id="location" type="text" placeholder="Your Location" />
+    <div class="checkbox-group">
+      <label><input type="checkbox" id="food" /> Food</label>
+      <label><input type="checkbox" id="clothes" /> Clothes</label>
+      <label><input type="checkbox" id="money" /> Money</label>
+      <label><input type="checkbox" id="other" /> Other</label>
+    </div>
+    <input id="file" type="file" />
+    <button onclick="submitForm()">Submit</button>
+    <p id="message"></p>
+  </div>
+
+  <script>
+    function submitForm() {
+      let name = document.getElementById('name').value;
+      let email = document.getElementById('email').value;
+      let location = document.getElementById('location').value;
+      let file = document.getElementById('file').files[0];
+      let checkedItems = [];
+
+      if (document.getElementById('food').checked) checkedItems.push('Food');
+      if (document.getElementById('clothes').checked) checkedItems.push('Clothes');
+      if (document.getElementById('money').checked) checkedItems.push('Money');
+      if (document.getElementById('other').checked) checkedItems.push('Other');
+
+      if (name === '' || email === '' || location === '' || !file || checkedItems.length === 0) {
+        document.getElementById('message').innerText = 'Please fill all fields, select at least one donation type, and upload a file.';
+        return;
+      }
+
+      document.getElementById('message').innerText = `Thank you for your donation of ${checkedItems.join(', ')}!`;
+    }
+  </script>
+</body>
+</html>
